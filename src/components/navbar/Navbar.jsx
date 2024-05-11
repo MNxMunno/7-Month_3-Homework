@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 function Navbar() {
   const users = useSelector((s) => s.users.value);
-  console.log(users);
+  // console.log(users);
   return (
     <div className="navbar">
       <h2>Redux Toolkit</h2>

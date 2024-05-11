@@ -15,17 +15,19 @@ function Users({ data }) {
           <h2>{user.name}</h2>
           <p>{user.profession}</p>
           <p>{user.age} years old</p>
-          <button>Remove</button>
+          <button onClick={() => dispatch(removeFromUsers(user))}>
+            Remove
+          </button>
         </div>
       ))}
 
-      <div className="users__card">
+      {/* <div className="users__card">
         <img src={female} alt="" />
         <h2>{data.name}</h2>
         <p>{data.profession}</p>
         <p>{data.age} years old</p>
         <button onClick={() => dispatch(removeFromUsers(data))}>Remove</button>
-      </div>
+      </div> */}
     </div>
   );
 }

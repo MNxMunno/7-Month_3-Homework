@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./CreateUser.css";
-import { addToUsers  } from "../../context/usersSlice.jsx";
+import { addToUsers } from "../../context/usersSlice";
 import { useDispatch } from "react-redux";
 
 function CreateUser() {
@@ -19,16 +19,16 @@ function CreateUser() {
       age: +age,
       gender,
     };
-dispatch(addToUsers(newUser))
-setName("")
-setAge("")
-setProfession("")
-setGender("")
+    dispatch(addToUsers(newUser));
+    setName("");
+    setAge("");
+    setProfession("");
+    setGender("");
   };
   return (
     <div className="create__user">
       <h2>Create User</h2>
-      <form onSubmit={handleSubmit} className="create__user-form" action="">
+      <form onSubmit={handleSubmit} className="create__user-form">
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
